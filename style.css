@@ -1242,6 +1242,33 @@ Question Button
     justify-content: center;
   }
 }
+/* Desktop ke liye */
+.banner {
+  height: 500px;
+  font-size: 2rem;
+}
+
+/* Mobile ke liye */
+@media (max-width: 768px) {
+  .banner {
+    height: 300px;
+    font-size: 1.2rem;
+  }
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container div {
+  flex: 1 1 100%; /* Mobile par full width */
+}
+
+@media (min-width: 768px) {
+  .container div {
+    flex: 1 1 50%; /* Tablet/Laptop par half width */
+  }
+}
 
 /* Dark Theme based on system preference
 @media (prefers-color-scheme: dark) {
