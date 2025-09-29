@@ -4,14 +4,8 @@ const faqItems = document.querySelectorAll(".faq-question");
 faqItems.forEach(btn => {
   btn.addEventListener("click", () => {
     const answer = btn.nextElementSibling;
-
-    // Toggle 'active' class for answer
     answer.classList.toggle("active");
-
-    // Toggle 'open' class for question (for + / − symbol)
     btn.classList.toggle("open");
-
-    // Change + to − and vice versa
     const symbol = btn.querySelector("span");
     symbol.textContent = btn.classList.contains("open") ? "−" : "+";
   });
@@ -19,7 +13,6 @@ faqItems.forEach(btn => {
 
 // ===== Smooth Scroll for Header & Footer Links =====
 const navLinks = document.querySelectorAll('header nav ul li a, .footer ul li a');
-
 navLinks.forEach(link => {
   link.addEventListener('click', (e) => {
     e.preventDefault();
@@ -27,7 +20,7 @@ navLinks.forEach(link => {
     const targetSection = document.getElementById(targetID);
     if (targetSection) {
       window.scrollTo({
-        top: targetSection.offsetTop - 60, // adjust for sticky header
+        top: targetSection.offsetTop - 60,
         behavior: 'smooth'
       });
     }
@@ -43,17 +36,19 @@ window.addEventListener('scroll', () => {
     header.classList.remove("shrink");
   }
 });
-// Mobile menu toggle
+
+// ✅ Mobile menu toggle (fixed & safe)
 const menuBtn = document.querySelector('.menu-toggle');
 const navbar = document.querySelector('.navbar');
+if (menuBtn && navbar) {
+  menuBtn.addEventListener('click', () => {
+    navbar.classList.toggle('active');
+  });
+}
 
-menuBtn.addEventListener('click', () => {
-  navbar.classList.toggle('active');
-});
 // ===== Hero Button Scroll to About =====
 const heroBtn = document.querySelector('.hero-text .btn');
 const aboutSection = document.querySelector('.about');
-
 if(heroBtn && aboutSection){
   heroBtn.addEventListener('click', () => {
     window.scrollTo({
