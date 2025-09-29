@@ -1243,13 +1243,13 @@ Question Button
   }
 }
 /* Desktop ke liye */
-.banner {
+/* .banner {
   height: 500px;
   font-size: 2rem;
-}
+} */
 
 /* Mobile ke liye */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .banner {
     height: 300px;
     font-size: 1.2rem;
@@ -1261,14 +1261,32 @@ Question Button
 }
 
 .container div {
-  flex: 1 1 100%; /* Mobile par full width */
+  flex: 1 1 100%; /* Mobile par full width */ 
 }
 
 @media (min-width: 768px) {
   .container div {
     flex: 1 1 50%; /* Tablet/Laptop par half width */
+  /* }
+} */
+
+/* ✅ Menu button default hidden */
+ .menu-toggle {
+  display: none;
+}
+
+/* ✅ Mobile view me show karo */
+@media (max-width: 768px) {
+  .menu-toggle {
+    font-size: 28px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
   }
 }
+    
 /* ✅ Navbar hamburger fix */
 @media (max-width: 768px) {
   .menu-toggle {
