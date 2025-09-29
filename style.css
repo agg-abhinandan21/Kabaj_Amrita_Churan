@@ -1150,6 +1150,18 @@ Question Button
 }
 
 /* ===== RESPONSIVE ===== */
+* ✅ Banner responsive fix */
+@media (max-width: 768px) {
+  .banner-slider {
+    height: auto;        /* height automatic kar do */
+  }
+  .banner-slider .slide img {
+    height: auto;
+    max-height: 300px;   /* phone pe banner max 300px tak hi dikhe */
+    object-fit: contain; /* pura image dikh jaye bina crop hue */
+  }
+}
+
 @media (max-width: 768px) {
   nav ul {
     display: none; /* later we can add hamburger menu */
@@ -1341,6 +1353,26 @@ Question Button
 
   .hero-text, .about-text {
     text-align: center;
+  }
+}
+    
+/* ✅ Mobile navbar toggle fix */
+@media (max-width: 768px) {
+  .navbar {
+    display: none;  /* by default hidden */
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    padding: 15px;
+    z-index: 999;
+  }
+
+  .navbar.active {
+    display: flex;  /* button dabane pe visible */
   }
 }
 
