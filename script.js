@@ -43,8 +43,13 @@ window.addEventListener('scroll', () => {
     header.classList.remove("shrink");
   }
 });
+// Mobile menu toggle
+const menuBtn = document.querySelector('.menu-toggle');
+const navbar = document.querySelector('.navbar');
 
-
+menuBtn.addEventListener('click', () => {
+  navbar.classList.toggle('active');
+});
 // ===== Hero Button Scroll to About =====
 const heroBtn = document.querySelector('.hero-text .btn');
 const aboutSection = document.querySelector('.about');
