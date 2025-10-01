@@ -98,20 +98,22 @@ html {
   transform: scale(1.05); /* halka zoom */
 }
 
-/* Buy Now button */
-.buy-btn {
+/* Order Now button styling */
+.order-now-btn {
   background: #25d366;
   color: #fff !important;
   border-radius: 6px;
   padding: 8px 16px;
-  font-size: 18px;       /* nav ke barabar */
-  font-weight: 700;      /* aur bold */
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+  margin-left: 20px;
   transition: background 0.3s, transform 0.2s ease;
 }
 
-.buy-btn:hover {
+.order-now-btn:hover {
   background: #1da851;
-  transform: scale(1.08); /* thoda aur zoom hover pe */
+  transform: scale(1.08);
 }
 
 /* ===== SLIDER BANNER ===== */
@@ -1310,17 +1312,23 @@ Question Button
     margin-left: auto;
   }
 }  
-/* ✅ Navbar hamburger fix */
+/* ✅ Mobile me Order Now button hamesha header ke right me dikhe */
+@media (max-width: 768px) {
+  .order-now-btn {
+    margin-left: auto;
+  }
+
   .navbar {
     position: absolute;
     top: 70px;
-    right: 15px;
+    right: 20px;
     background: #fff;
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     display: none;
     flex-direction: column;
     padding: 10px;
+    z-index: 999;
   }
 
   .navbar.active {
@@ -1335,9 +1343,9 @@ Question Button
   .navbar ul li a {
     font-size: 16px;
     padding: 10px;
+    display: block;
   }
 }
-
 /* ✅ Hero & About section images responsive */
 @media (max-width: 768px) {
   .hero-container, .about-container {
