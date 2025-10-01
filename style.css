@@ -1160,149 +1160,74 @@ Question Button
 @media (max-width: 768px) {
   .banner-slider {
     height: auto;
-    min-height: 250px;     /* container ki minimum height fix kar do */
-    position: relative;    /* absolute positioned images ke liye jaruri */
+    min-height: 250px;     /* minimum height fix */
+    position: relative;    /* absolute positioned images ke liye */
   }
 
   .banner-slider .slide {
-    position: relative;    /* mobile ke liye absolute hata do */
+    position: relative;    /* mobile ke liye absolute hatao */
   }
 
   .banner-slider .slide img {
-    width: 100%;           /* screen width ke hisaab se fit */
-    height: auto;          /* height proportionally adjust */
-    object-fit: contain;   /* pura clear image dikhayega, crop nahi karega */
+    width: 100%;           
+    height: auto;          
+    object-fit: contain;   /* crop nahi, pura image dikhaye */
   }
-}
 
-
-@media (max-width: 768px) {
-  nav ul {
-    display: none; /* later we can add hamburger menu */
-  }
-  .hero-container {
+  .banner-container {
     flex-direction: column;
     text-align: center;
   }
 
-  .hero-text h1 {
-    font-size: 1.8rem;
+  .banner-content {
+    text-align: center;
   }
 
-  .hero-text p {
-    font-size: 1rem;
+  .app-buttons {
+    justify-content: center;
   }
+
+  .hero-container,
   .about-container {
     flex-direction: column;
     text-align: center;
   }
 
-  .about-text h2 {
-    font-size: 1.6rem;
+  .hero-text h1,
+  .about-text h2,
+  .benefits h2,
+  .ingredients h2,
+  .testimonials h2,
+  .how-to-use h2,
+  .cta h2 {
+    font-size: 1.6rem; /* headings adjust */
   }
-  .about-image {
-    text-align: center;
+
+  .hero-text p,
+  .about-text p,
+  .benefits-intro,
+  .ingredients-intro,
+  .testimonials-intro,
+  .how-intro,
+  .cta p {
+    font-size: 1rem; /* paragraph adjust */
   }
+
+  .hero-image img,
+  .about-image img {
+    max-width: 90%;
+    height: auto;
+  }
+
   .about-image img {
     max-width: 55%;
   }
 
-  /* .about-text p { */
-    /* font-size: 1rem; */
-  /* } */
-    .benefits h2 {
-    font-size: 1.6rem;
+  nav ul {
+    display: none; /* mobile menu hide */
   }
 
-  .benefits-intro {
-    font-size: 1rem;
-  }
-  .ingredients h2 {
-    font-size: 1.6rem;
-  }
-
-  .ingredients-intro {
-    font-size: 1rem;
-  }
-  .testimonials h2 {
-    font-size: 1.6rem;
-  }
-
-  .testimonials-intro {
-    font-size: 1rem;
-  }
-  .how-to-use h2 {
-    font-size: 1.6rem;
-  }
-
-  .how-intro {
-    font-size: 1rem;
-  }
-  .cta h2 {
-    font-size: 1.6rem;
-  }
-
-  .cta p {
-    font-size: 1rem;
-  }
-  
-@media (max-width: 768px) {
-  .banner-container {
-    flex-direction: column;
-    text-align: center;
-  }
-  .banner-content {
-    text-align: center;
-  }
-  .app-buttons {
-    justify-content: center;
-  }
-}
-
-   .footer-container {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  .social-icons {
-    justify-content: center;
-  }
-}
-/* Desktop ke liye */
-/* .banner {
-  height: 500px;
-  font-size: 2rem;
-} */
-
-/* Mobile ke liye */
-/* @media (max-width: 768px) {
-  .banner {
-    height: 300px;
-    font-size: 1.2rem;
-  }
-}
-.container {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.container div {
-  flex: 1 1 100%; /* Mobile par full width */ 
-}
-
-@media (min-width: 768px) {
-  .container div {
-    flex: 1 1 50%; /* Tablet/Laptop par half width */
-  /* }
-} */
-
-/* ✅ Menu button default hidden */
- .menu-toggle {
-  display: none;
-}
-
-/* ✅ Mobile view me show karo */
-@media (max-width: 768px) {
+  /* ✅ Mobile menu toggle button */
   .menu-toggle {
     font-size: 26px;
     background: none;
@@ -1311,61 +1236,8 @@ Question Button
     display: block;
     margin-left: auto;
   }
-}  
-/* ✅ Mobile me Order Now button hamesha header ke right me dikhe */
-@media (max-width: 768px) {
-  .order-now-btn {
-    margin-left: auto;
-  }
 
-  .navbar {
-    position: absolute;
-    top: 70px;
-    right: 20px;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    display: none;
-    flex-direction: column;
-    padding: 10px;
-    z-index: 999;
-  }
-
-  .navbar.active {
-    display: flex;
-  }
-
-  .navbar ul {
-    flex-direction: column;
-    gap: 12px;
-  }
-
-  .navbar ul li a {
-    font-size: 16px;
-    padding: 10px;
-    display: block;
-  }
-}
-/* ✅ Hero & About section images responsive */
-@media (max-width: 768px) {
-  .hero-container, .about-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .hero-image img, 
-  .about-image img {
-    max-width: 90%;
-    height: auto;
-  }
-
-  .hero-text, .about-text {
-    text-align: center;
-  }
-}
-    
-/* ✅ Mobile navbar toggle fix */
-@media (max-width: 768px) {
+  /* ✅ Mobile navbar */
   .navbar {
     display: none;  /* by default hidden */
     flex-direction: column;
@@ -1382,10 +1254,60 @@ Question Button
   .navbar.active {
     display: flex;  /* button dabane pe visible */
   }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .navbar ul li a {
+    font-size: 16px;
+    padding: 10px;
+    display: block;
+  }
+
+  /* ✅ Order Now button mobile fix */
+  .order-now-btn {
+    margin-left: auto;
+  }
+
+  /* Footer responsive */
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
 }
 
+/* Desktop ke liye (default) */
+/* Agar chaho to banner height aur font-size yaha set kar sakte ho */
+/*
+.banner {
+  height: 500px;
+  font-size: 2rem;
+}
+*/
 
-/* Dark Theme based on system preference
+/* Container responsive */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container div {
+  flex: 1 1 100%; /* Mobile par full width */ 
+}
+
+@media (min-width: 768px) {
+  .container div {
+    flex: 1 1 50%; /* Tablet/Laptop par half width */
+  }
+}
+
+/* Dark Theme based on system preference */
 @media (prefers-color-scheme: dark) {
   body {
     background: #121212;
@@ -1399,12 +1321,11 @@ Question Button
 
   a, .banner-btn, .cta-btn, .whatsapp-float {
     color: #ffffff;
-  } */
+  }
 
-  /* Example: buttons background
   .banner-btn, .cta-btn {
     background-color: #25d366;
   } 
-}*/
+}
 
 /* ===== End of style.css ===== */
