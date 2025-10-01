@@ -27,24 +27,18 @@ navLinks.forEach(link => {
   });
 });
 
-// Sticky Header with Shrink
+// ===== Header shrink =====
 const header = document.querySelector('.main-header');
 window.addEventListener('scroll', () => {
-  if (window.scrollY > 50) {
-    header.classList.add("shrink");
-  } else {
-    header.classList.remove("shrink");
-  }
+  if (window.scrollY > 50) header.classList.add("shrink");
+  else header.classList.remove("shrink");
 });
 
-// ✅ Mobile menu toggle (fixed & safe)
+// ===== Mobile menu toggle =====
 const menuBtn = document.querySelector('.menu-toggle');
 const navbar = document.querySelector('.navbar');
-if (menuBtn && navbar) {
-  menuBtn.addEventListener('click', () => {
-    navbar.classList.toggle('active');
-  });
-}
+if (menuBtn && navbar) menuBtn.addEventListener('click', () => navbar.classList.toggle('active'));
+
 
 // ===== Hero Button Scroll to About =====
 const heroBtn = document.querySelector('.hero-text .btn');
