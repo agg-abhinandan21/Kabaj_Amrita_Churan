@@ -1157,13 +1157,13 @@ Question Button
 /* ✅ Banner responsive fix */
 @media (max-width: 768px) {
   .banner-slider {
-    height: calc(100vh - 80px);        /* height automatic kar do */
+    height: auto;              /* height auto rakho */
   }
   .banner-slider .slide img {
-    width: 100%;
-    height: 100;
-    /* max-height: 300px;   /* phone pe banner max 300px tak hi dikhe */ */
-    object-fit: cover;   /* contain ki jagah cover karo taki blank na aaye */
+    width: 100%;               /* image phone ki width ke hisaab se fit */
+    height: auto;              /* height proportionally adjust ho */
+    max-height: 500px;         /* optional: taaki screen se jyada lamba na ho */
+    object-fit: contain;       /* image bilkul clear dikhni chahiye, crop nahi hogi */
   }
 }
 
