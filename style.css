@@ -1157,15 +1157,22 @@ Question Button
 /* ✅ Banner responsive fix */
 @media (max-width: 768px) {
   .banner-slider {
-    height: auto;              /* height auto rakho */
+    height: auto;
+    min-height: 250px;     /* container ki minimum height fix kar do */
+    position: relative;    /* absolute positioned images ke liye jaruri */
   }
+
+  .banner-slider .slide {
+    position: relative;    /* mobile ke liye absolute hata do */
+  }
+
   .banner-slider .slide img {
-    width: 100%;               /* image phone ki width ke hisaab se fit */
-    height: auto;              /* height proportionally adjust ho */
-    max-height: 500px;         /* optional: taaki screen se jyada lamba na ho */
-    object-fit: contain;       /* image bilkul clear dikhni chahiye, crop nahi hogi */
+    width: 100%;           /* screen width ke hisaab se fit */
+    height: auto;          /* height proportionally adjust */
+    object-fit: contain;   /* pura clear image dikhayega, crop nahi karega */
   }
 }
+
 
 @media (max-width: 768px) {
   nav ul {
