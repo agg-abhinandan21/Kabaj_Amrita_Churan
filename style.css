@@ -29,7 +29,7 @@ html {
   background: #ffffff;
   padding: 15px 20px;   /* Normal size */
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
+  z-index: 2000;
   transition: all 0.3s ease;
 }
 
@@ -73,6 +73,9 @@ html {
 }
 
 /* Navbar */
+.navbar {
+  z-index: 1500;  /* menu banner ke upar aaye */
+}
 .navbar ul {
   list-style: none;
   display: flex;
@@ -1150,14 +1153,14 @@ Question Button
 }
 
 /* ===== RESPONSIVE ===== */
-* ✅ Banner responsive fix */
+/* ✅ Banner responsive fix */
 @media (max-width: 768px) {
   .banner-slider {
     height: auto;        /* height automatic kar do */
   }
   .banner-slider .slide img {
     height: auto;
-    max-height: 300px;   /* phone pe banner max 300px tak hi dikhe */
+    max-height: 280px;   /* phone pe banner max 300px tak hi dikhe */
     object-fit: contain; /* pura image dikh jaye bina crop hue */
   }
 }
@@ -1290,30 +1293,19 @@ Question Button
 /* ✅ Mobile view me show karo */
 @media (max-width: 768px) {
   .menu-toggle {
-    font-size: 28px;
+    font-size: 26px;
     background: none;
     border: none;
     cursor: pointer;
     display: block;
     margin-left: auto;
   }
-}
-    
+}  
 /* ✅ Navbar hamburger fix */
-@media (max-width: 768px) {
-  .menu-toggle {
-    font-size: 24px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    display: block;
-    margin-left: auto;
-  }
-
   .navbar {
     position: absolute;
     top: 70px;
-    right: 20px;
+    right: 15px;
     background: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
@@ -1328,13 +1320,12 @@ Question Button
 
   .navbar ul {
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
   }
 
   .navbar ul li a {
     font-size: 16px;
     padding: 10px;
-    display: block;
   }
 }
 
