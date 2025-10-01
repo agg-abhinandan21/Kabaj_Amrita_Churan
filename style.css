@@ -44,6 +44,8 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: nowrap;        /* ek line me rakhe */
+  padding: 10px 20px;
 }
 
 /* Logo */
@@ -107,7 +109,7 @@ html {
   font-size: 18px;
   font-weight: 700;
   text-decoration: none;
-  margin-left: 20px;
+  margin-left: auto;
   transition: background 0.3s, transform 0.2s ease;
 }
 
@@ -1234,7 +1236,7 @@ Question Button
     border: none;
     cursor: pointer;
     display: block;
-    margin-left: auto;
+    margin-left: 10px;
   }
 
   /* ✅ Mobile navbar */
@@ -1269,6 +1271,7 @@ Question Button
   /* ✅ Order Now button mobile fix */
   .order-now-btn {
     margin-left: auto;
+    white-space: nowrap;      /* ek line me rakhe, wrap na ho */
   }
 
   /* Footer responsive */
@@ -1307,7 +1310,7 @@ Question Button
   }
 }
 
-/* Dark Theme based on system preference */
+/* /* Dark Theme based on system preference 
 @media (prefers-color-scheme: dark) {
   body {
     background: #121212;
@@ -1326,6 +1329,6 @@ Question Button
   .banner-btn, .cta-btn {
     background-color: #25d366;
   } 
-}
+} */
 
 /* ===== End of style.css ===== */
