@@ -15,10 +15,10 @@ body {
 }
 
 /* ===== SCROLL FIX ===== */
-html {
+/* html {
   scroll-behavior: smooth;
   scroll-padding-top: 80px; /* header ki height */
-}
+/* } */ 
 
 /* ===== Header ===== */
 .main-header {
