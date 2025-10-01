@@ -119,7 +119,7 @@ html {
 .banner-slider {
   position: relative;
   width: 100%;
-  height: calc(100vh - 80px); /* ✅ header ke baad ekdum fit screen */
+  height: auto; /* ✅ header ke baad ekdum fit screen */
   overflow: hidden;
   margin-top: 80px;
 }
@@ -1160,7 +1160,7 @@ Question Button
   }
   .banner-slider .slide img {
     height: auto;
-    max-height: 280px;   /* phone pe banner max 300px tak hi dikhe */
+    max-height: 300px;   /* phone pe banner max 300px tak hi dikhe */
     object-fit: contain; /* pura image dikh jaye bina crop hue */
   }
 }
